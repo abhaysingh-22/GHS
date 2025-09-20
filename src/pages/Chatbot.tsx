@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2, Bot, User as UserIcon, Trash2, Send } from "lucide-react";
+import { SYSTEM_PROMPT } from "@/util/systemprompt";
 
 type Role = "user" | "assistant";
 
@@ -18,6 +19,7 @@ interface ChatMessage {
 }
 
 const Chatbot: React.FC = () => {
+  
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [pendingText, setPendingText] = useState("");
@@ -42,7 +44,7 @@ const Chatbot: React.FC = () => {
         history: [
           {
             role: "user",
-            parts: [{ text: "You are a concise and friendly assistant in a web chat. Keep replies short unless user asks for detail." }],
+            parts: [{ text: SYSTEM_PROMPT}],
           },
           {
             role: "model",
@@ -247,6 +249,7 @@ const Chatbot: React.FC = () => {
               </div>
             </CardContent>
           </Card>
+
         </div>
       </div>
     </div>
