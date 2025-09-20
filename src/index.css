@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mental Health & Wellness Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Wellness Color Palette */
+    --background: 220 20% 98%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Therapeutic Primary - Calming Blue */
+    --primary: 210 90% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 210 60% 85%;
+
+    /* Wellness Secondary - Gentle Green */
+    --secondary: 150 40% 94%;
+    --secondary-foreground: 150 60% 25%;
+    --wellness-green: 150 70% 55%;
+    --wellness-green-soft: 150 50% 85%;
+
+    /* Mindful Accents */
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 15% 50%;
+
+    --accent: 260 60% 94%;
+    --accent-foreground: 260 80% 40%;
+
+    /* Mood Colors */
+    --mood-happy: 45 95% 70%;
+    --mood-sad: 220 60% 70%;
+    --mood-anxious: 20 85% 75%;
+    --mood-calm: 150 70% 70%;
+    --mood-energetic: 280 70% 70%;
+
+    /* Therapeutic Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 90% 65%), hsl(190 85% 70%));
+    --gradient-wellness: linear-gradient(135deg, hsl(150 70% 55%), hsl(170 60% 60%));
+    --gradient-calm: linear-gradient(135deg, hsl(260 60% 75%), hsl(280 55% 80%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 90% 65%), hsl(260 70% 70%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 20% 98%));
+
+    /* Shadows & Effects */
+    --shadow-soft: 0 4px 20px hsl(220 20% 80% / 0.3);
+    --shadow-card: 0 2px 12px hsl(220 20% 85% / 0.4);
+    --shadow-mood: 0 6px 25px hsl(210 90% 65% / 0.2);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 94%;
+    --ring: 210 90% 65%;
+
+    --radius: 0.75rem;
+
+    /* Animations & Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Dark Mode Wellness Palette */
+    --background: 220 25% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 220 15% 92%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    /* Dark Primary - Brighter for contrast */
+    --primary: 210 85% 70%;
+    --primary-foreground: 220 25% 8%;
+    --primary-soft: 210 50% 25%;
+
+    /* Dark Secondary */
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 220 15% 85%;
+    --wellness-green: 150 65% 60%;
+    --wellness-green-soft: 150 30% 25%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 260 40% 20%;
+    --accent-foreground: 260 60% 85%;
+
+    /* Dark Mood Colors */
+    --mood-happy: 45 85% 65%;
+    --mood-sad: 220 50% 65%;
+    --mood-anxious: 20 75% 70%;
+    --mood-calm: 150 60% 65%;
+    --mood-energetic: 280 65% 70%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 15%;
+    --ring: 210 85% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
