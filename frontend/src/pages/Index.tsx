@@ -101,9 +101,7 @@ const Index = () => {
             <div className="pt-8">
               <p className="text-sm text-muted-foreground mb-4">Trusted by 10,000+ people on their wellness journey</p>
               <div className="flex justify-center items-center gap-8 opacity-60">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <div key={i} className="w-8 h-8 bg-muted rounded-full"></div>
-                ))}
+                
               </div>
             </div>
           </div>
